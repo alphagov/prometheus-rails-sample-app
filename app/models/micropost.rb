@@ -11,4 +11,10 @@ class Micropost < ActiveRecord::Base
     where("user_id IN (#{followed_user_ids}) OR user_id = :user_id",
           user_id: user.id)
   end
+
+  def self.average_tweet_length
+    tweets = Micropost.all.pluck(:content)
+    total = tweets.map(&:length).sum
+    (total.to_f / tweets.count).round
+  end
 end
