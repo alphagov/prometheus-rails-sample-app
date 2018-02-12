@@ -4,6 +4,13 @@ GIT
   specs:
     database_cleaner (1.3.0)
 
+GIT
+  remote: https://github.com/alphagov/gds_metrics_ruby
+  revision: e75869233d2d45279d99d9ad3a7382227b07924d
+  specs:
+    gds_metrics (0.0.1)
+      prometheus-client-mmap (= 0.9.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -124,13 +131,11 @@ GEM
       mini_portile (= 0.6.0)
     pg (0.15.1)
     polyglot (0.3.5)
-    prometheus-client (0.7.1)
-      quantile (~> 0.2.0)
+    prometheus-client-mmap (0.9.1)
     pry (0.10.0)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    quantile (0.2.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -234,6 +239,7 @@ DEPENDENCIES
   database_cleaner!
   factory_girl_rails (= 4.2.0)
   faker (= 1.1.2)
+  gds_metrics!
   growl (= 1.0.3)
   guard-rspec (= 2.5.0)
   guard-spork (= 1.5.0)
@@ -241,7 +247,6 @@ DEPENDENCIES
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
   pg (= 0.15.1)
-  prometheus-client (~> 0.7.1)
   rails (= 4.0.8)
   rails_12factor (= 0.0.2)
   rspec-rails (= 2.13.1)
@@ -259,4 +264,4 @@ RUBY VERSION
    ruby 2.3.5p376
 
 BUNDLED WITH
-   1.16.0
+   1.16.1

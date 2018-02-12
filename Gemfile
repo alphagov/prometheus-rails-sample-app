@@ -9,9 +9,8 @@ gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
-# gem 'prometheus-client-mmap', '~> 0.7.0.beta37'
-gem 'prometheus-client', '~> 0.7.1'
 gem 'influxdb-rails', '~> 0.4.3'
+gem 'gds_metrics', git: "https://github.com/alphagov/gds_metrics_ruby"
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
