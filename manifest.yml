@@ -1,9 +1,9 @@
 ---
 applications:
-- name: rails-prometheus
+- name: rails-prometheus-mysql
   memory: 256M
   instances: 1
   path: .
   command: bundle exec rake db:migrate && bundle exec rails s -p $PORT
   services:
-    - rails-postgres
+    - rails-mysql
